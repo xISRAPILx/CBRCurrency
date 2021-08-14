@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/currency_item_padding">
+
+    <TextView
+        android:id="@+id/tv_currency_code"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_currency_code"
+        android:backgroundTint="@color/currency_code_background"
+        android:gravity="center"
+        android:padding="@dimen/currency_code_padding"
+        android:textAppearance="@style/TextAppearance.CBRCurrency.Caption"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="GBP" />
+
+    <TextView
+        android:id="@+id/tv_currency_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.CBRCurrency.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_currency_code"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Фунт стерлингов Соединенного королевства" />
+
+    <TextView
+        android:id="@+id/tv_currency_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawablePadding="@dimen/margin_small"
+        android:textAppearance="@style/TextAppearance.CBRCurrency.Body1"
+        app:drawableStartCompat="@drawable/ic_baseline_trending_up_24"
+        app:drawableTint="@color/currency_code_background"
+        app:layout_constraintStart_toStartOf="@id/tv_currency_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_currency_name"
+        tools:text="101.3842 ₽" />
+
+    <TextView
+        android:id="@+id/tv_currency_prev_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textAppearance="@style/TextAppearance.CBRCurrency.Body1"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_currency_value"
+        app:layout_constraintStart_toEndOf="@id/tv_currency_value"
+        tools:text="102.0229 ₽" />
+</androidx.constraintlayout.widget.ConstraintLayout>
