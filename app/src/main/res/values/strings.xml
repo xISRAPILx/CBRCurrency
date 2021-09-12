@@ -2,4 +2,6 @@
     <string name="app_name">CBRCurrency</string>
     <string name="currency_value_mask">%s ₽</string>
     <string name="currencies_loading_error">При загрузка валют произошла ошибка :(</string>
+    <string name="currency_up">Валюта идёт вверх!</string>
+    <string name="currency_down">Валюта падает вниз!</string>
 </resources>
