@@ -1,2 +1,2 @@
 # Курс валют прямо с ЦБ!
-![Скриншот](https://github.com/xISRAPILx/CBRCurrency/blob/master/images/screenshot.png?raw=true)
+<image src="https://github.com/xISRAPILx/CBRCurrency/blob/master/images/screenshot.png?raw=true" width="300"/>
