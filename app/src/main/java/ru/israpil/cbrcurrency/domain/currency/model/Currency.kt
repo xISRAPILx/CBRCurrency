@@ -4,6 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import java.math.BigDecimal
 
+typealias CurrencyList = List<Currency>
+
 @Parcelize
 data class Currency(
     val id: String,
@@ -11,4 +13,6 @@ data class Currency(
     val name: String,
     val value: BigDecimal,
     val prevValue: BigDecimal
-) : Parcelable
+) : Parcelable{
+    val up get() = value > prevValue
+}

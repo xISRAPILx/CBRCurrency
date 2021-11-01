@@ -1,11 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id "androidx.navigation.safeargs.kotlin"
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id "dagger.hilt.android.plugin"
 }
+
+ext.composeVersion = "1.1.0-beta01"
 
 android {
     compileSdk 31
@@ -40,7 +41,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion '1.0.1'
+        kotlinCompilerExtensionVersion composeVersion
     }
 }
 
@@ -48,19 +49,14 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.3.1'
 
     // Compose UI
-    def composeVersion = "1.0.2"
-    implementation 'androidx.activity:activity-compose:1.3.1'
-    implementation "androidx.compose.ui:ui-tooling:$composeVersion"
+    implementation 'androidx.activity:activity-compose:1.4.0'
     implementation "androidx.compose.material:material:$composeVersion"
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07'
-    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
-
-    // AndroidX Lifecycle
-    def lifecycleVersion = "2.4.0-alpha03"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    implementation "androidx.compose.ui:ui-tooling:$composeVersion"
+    implementation 'com.google.accompanist:accompanist-swiperefresh:0.21.0-beta'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0-rc01'
 
     // Kotlin coroutines
-    def coroutinesVersion = "1.5.1"
+    def coroutinesVersion = "1.5.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
 
     // OkHttp
